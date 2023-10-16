@@ -26,7 +26,7 @@ const handleListenClick = (e) => {
     const transcript = Array.from(e.results).map(result => result[0]).map(result => result.transcript).join("");
     if (e.results[0].isFinal) {
       console.log(transcript);
-      if (transcript.includes(textToListen.value.trim())) currCounter.innerHTML = currCounter.value++;
+      if (transcript.toLowerCase().includes(textToListen.value.trim())) currCounter.innerHTML = currCounter.value++;
     }
   };
 
