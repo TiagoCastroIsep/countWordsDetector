@@ -29,8 +29,6 @@ const handleListenClick = (e) => {
     if (e.results[0].isFinal) {
       console.log(transcript);
       if (transcript.toLowerCase().includes(textToListen.value.toLowerCase().trim())) {
-        handleIncrementClick();
-
         let pos = transcript.indexOf(textToListen.value.toLowerCase().trim());
 
         while (pos !== -1) {
