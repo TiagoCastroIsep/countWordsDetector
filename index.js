@@ -17,15 +17,14 @@ const handleIncrementClick = () => {
 
 incrementBtn.addEventListener("click", handleIncrementClick);
 
-const handleListenClick = (e) => {
-  e.preventDefault();
+const handleListenClick = () => {
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   const recognition = new SpeechRecognition();
   recognition.continuous = true;
   //recognition.interimResults = true;
   recognition.lang = "pt-PT";
 
-  if (voiceTranscript.value == "") {
+  if (textToListen.value == "") {
     alert("Please provide words to evaluate.")
     return;
   }
