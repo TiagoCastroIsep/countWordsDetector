@@ -22,7 +22,7 @@ const handleListenClick = (e) => {
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   const recognition = new SpeechRecognition();
   recognition.continuous = true;
-  recognition.interimResults = true;
+  //recognition.interimResults = true;
   recognition.lang = "pt-PT";
 
   const handleRecognition = (e) => {
