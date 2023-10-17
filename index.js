@@ -25,10 +25,15 @@ const handleListenClick = (e) => {
   //recognition.interimResults = true;
   recognition.lang = "pt-PT";
 
+  if (voiceTranscript !== "") {
+    alert("Please provide words to evaluate.")
+    return;
+  }
+
   const handleRecognition = (e) => {
     const transcript = Array.from(e.results).map(result => result[0]).map(result => result.transcript).join("");
     if (e.results[0].isFinal) {
-      //voiceTranscript.value = transcript;
+      voiceTranscript.value = transcript;
       console.log(transcript);
       if (transcript.toLowerCase().includes(textToListen.value.toLowerCase().trim())) {
         let pos = transcript.indexOf(textToListen.value.toLowerCase().trim());
