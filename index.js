@@ -25,7 +25,7 @@ const handleListenClick = (e) => {
   //recognition.interimResults = true;
   recognition.lang = "pt-PT";
 
-  if (voiceTranscript == "") {
+  if (voiceTranscript.value == "") {
     alert("Please provide words to evaluate.")
     return;
   }
